@@ -67,6 +67,14 @@ class PrimeNumbers {
         return true;
     }
 
+    static void printPrimeNo(int n){
+        for(int i = 2 ; i<=n ; i++){
+            if(optimzedIsPrime(i)){
+                System.out.println(i);
+            }
+        }
+    }
+
     public static void main(String args[]) {
         // Create a Scanner object to read input from the user
         Scanner scan = new Scanner(System.in);
@@ -78,8 +86,8 @@ class PrimeNumbers {
         int n = scan.nextInt();
 
         // Check if the number is prime using the optimized method
-        System.out.println(optimzedIsPrime(n) ? "Prime" : "Not Prime");
-
+        // System.out.println(optimzedIsPrime(n) ? "Prime" : "Not Prime");
+        printPrimeNo(n);
         // Close the Scanner to prevent resource leaks
         scan.close();
     }
